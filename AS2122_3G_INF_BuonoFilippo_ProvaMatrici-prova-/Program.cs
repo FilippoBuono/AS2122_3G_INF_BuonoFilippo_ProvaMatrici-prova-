@@ -52,12 +52,15 @@ namespace AS2122_3G_INF_BuonoFilippo_ProvaMatrici_prova_
         /// <param name="mat"></param>
         public static void CaricaMatrice(ref int[,] mat)
         {
-            var random = new random();
-            for (int i = 0; i < mat ; i++) 
+            Random numRand = new Random();
+            int matSize = mat.GetUpperBound(0) + 1;
+            for (int c = 0; c < matSize; c++)
             {
-                mat[i] = random.Next(MIN_VALUE_MAT, MAX_VALUE_MAT);   
+                for (int d = 0; d < matSize; d++)
+                {
+                    mat[c, d] = numRand.Next(MIN_VALUE_MAT, MAX_VALUE_MAT);
+                }
             }
-
         }
 
         /// <summary>
@@ -66,7 +69,11 @@ namespace AS2122_3G_INF_BuonoFilippo_ProvaMatrici_prova_
         /// <param name="mat"></param>
         public static void StampaCornice(int[,] mat)
         {
-
+            string riga = null;
+            for (int r = 0; r < matSize; r++) 
+            {
+                
+            }
         }
 
         /// <summary>
@@ -86,7 +93,9 @@ namespace AS2122_3G_INF_BuonoFilippo_ProvaMatrici_prova_
         /// <param name="mat"></param>
         static void StampaMatrice(int[,] mat)
         {
-
+            int j;
+            string med;
+            for(j=0;j<)
         }
 
         /// <summary>
