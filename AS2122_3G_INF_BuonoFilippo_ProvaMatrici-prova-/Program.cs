@@ -69,10 +69,13 @@ namespace AS2122_3G_INF_BuonoFilippo_ProvaMatrici_prova_
         /// <param name="mat"></param>
         public static void StampaCornice(int[,] mat)
         {
-            string riga = null;
-            for (int r = 0; r < matSize; r++) 
+            int matSize = mat.GetUpperBound(0) + 1;
+            for (int y = 0; y < matSize; y++)
             {
-                
+                for (int u = 0; u < matSize; u++)
+                {
+                    Console.WriteLine(mat[y, u]);
+                }
             }
         }
 
