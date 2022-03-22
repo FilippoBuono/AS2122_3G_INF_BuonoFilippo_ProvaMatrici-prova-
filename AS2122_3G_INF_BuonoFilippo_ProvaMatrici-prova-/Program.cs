@@ -52,6 +52,11 @@ namespace AS2122_3G_INF_BuonoFilippo_ProvaMatrici_prova_
         /// <param name="mat"></param>
         public static void CaricaMatrice(ref int[,] mat)
         {
+            var random = new random();
+            for (int i = 0; i < mat ; i++) 
+            {
+                mat[i] = random.Next(MIN_VALUE_MAT, MAX_VALUE_MAT);   
+            }
 
         }
 
