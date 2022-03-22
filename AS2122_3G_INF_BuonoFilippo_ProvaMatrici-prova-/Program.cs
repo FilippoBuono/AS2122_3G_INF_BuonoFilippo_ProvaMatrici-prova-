@@ -86,7 +86,14 @@ namespace AS2122_3G_INF_BuonoFilippo_ProvaMatrici_prova_
         /// <returns></returns>
         public static void InvertiColonne(ref int[,] mat)
         {
-
+            int matSize = mat.GetUpperBound(0) + 1;
+            int temp;
+            for (int p = 0; p < matSize; p++)
+            {
+                temp = mat[p, 0];
+                mat[p, 0] = mat[p, matSize - 1];
+                mat[p, matSize - 1] = temp;
+            }
         }
 
 
@@ -96,9 +103,7 @@ namespace AS2122_3G_INF_BuonoFilippo_ProvaMatrici_prova_
         /// <param name="mat"></param>
         static void StampaMatrice(int[,] mat)
         {
-            int j;
-            string med;
-            for(j=0;j<)
+            
         }
 
         /// <summary>
