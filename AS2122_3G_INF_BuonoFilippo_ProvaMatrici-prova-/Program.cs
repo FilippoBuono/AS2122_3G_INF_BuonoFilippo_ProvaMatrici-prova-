@@ -69,14 +69,7 @@ namespace AS2122_3G_INF_BuonoFilippo_ProvaMatrici_prova_
         /// <param name="mat"></param>
         public static void StampaCornice(int[,] mat)
         {
-            int matSize = mat.GetUpperBound(0) + 1;
-            for (int y = 0; y < matSize; y++)
-            {
-                for (int u = 0; u < matSize; u++)
-                {
-                    Console.WriteLine(mat[y, u]);
-                }
-            }
+            
         }
 
         /// <summary>
@@ -103,7 +96,15 @@ namespace AS2122_3G_INF_BuonoFilippo_ProvaMatrici_prova_
         /// <param name="mat"></param>
         static void StampaMatrice(int[,] mat)
         {
-            
+            Random numRand = new Random();
+            int matSize = mat.GetUpperBound(0) + 1;
+            for (int c = 0; c < matSize; c++)
+            {
+                for (int d = 0; d < matSize; d++)
+                {
+                    mat[c, d] = numRand.Next(MIN_VALUE_MAT, MAX_VALUE_MAT);
+                }
+            }
         }
 
         /// <summary>
